@@ -1,0 +1,20 @@
+lsblk
+sudo mkfs -t xfs /dev/xvdf
+sudo mkdir /ebs
+sudo mount /dev/xvdf /ebs
+--------------
+
+efs connect
+-----------------
+
+sudo apt-get install nfs-common
+sudo mkdir efs
+sudo apt-get install nfs-common
+
+after this we will past
+
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-1756c34c.efs.eu-central-1.amazonaws.com:/ efs
+
+
+show the efs and connect
+df-h
